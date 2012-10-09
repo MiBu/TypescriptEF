@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5FD7A6BC-AD76-4DC6-82A3-2C11486C7CC1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Template</RootNamespace>
+    <AssemblyName>Template</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <None Include="Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model.ts</LastGenOutput>
+    </None>
+    <None Include="Template.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Template.ts</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Actions.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="Countries.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="Currencies.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="Doctors.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="DoctorsInfo.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="Laboratories.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="LaboratoriesInfo.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="Languages.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="Locations.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="LocationTypes.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="Model.ts">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="Ordinations.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="OrdinationsInfo.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="Organizations.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="PositionStates.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="Resources.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="Roles.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="Settings.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="Statuses.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="sysdiagrams.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="Template.ts">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Template.tt</DependentUpon>
+    </Content>
+    <Content Include="Users.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="UsersInfo.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="Workers.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="WorkGroups.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="WorkMarks.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="Works.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="WorksComments.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="WorksCommentsInfo.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="WorksDetails.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="WorksInfo.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="WorksPositions.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="WorksPositionsInfo.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="WorkTypes.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+    <Content Include="WorkTypesInfo.ts">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

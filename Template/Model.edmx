@@ -1,0 +1,2641 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FuturaDentalModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="FuturaDentalModelStoreContainer">
+          <EntitySet Name="Actions" EntityType="FuturaDentalModel.Store.Actions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Countries" EntityType="FuturaDentalModel.Store.Countries" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Currencies" EntityType="FuturaDentalModel.Store.Currencies" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Doctors" EntityType="FuturaDentalModel.Store.Doctors" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Laboratories" EntityType="FuturaDentalModel.Store.Laboratories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Languages" EntityType="FuturaDentalModel.Store.Languages" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Locations" EntityType="FuturaDentalModel.Store.Locations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Locations_Laboratories" EntityType="FuturaDentalModel.Store.Locations_Laboratories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Locations_Ordinations" EntityType="FuturaDentalModel.Store.Locations_Ordinations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LocationTypes" EntityType="FuturaDentalModel.Store.LocationTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Ordinations" EntityType="FuturaDentalModel.Store.Ordinations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Organizations" EntityType="FuturaDentalModel.Store.Organizations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PositionStates" EntityType="FuturaDentalModel.Store.PositionStates" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Resources" EntityType="FuturaDentalModel.Store.Resources" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Roles" EntityType="FuturaDentalModel.Store.Roles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Roles_Actions" EntityType="FuturaDentalModel.Store.Roles_Actions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Settings" EntityType="FuturaDentalModel.Store.Settings" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Statuses" EntityType="FuturaDentalModel.Store.Statuses" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="FuturaDentalModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users" EntityType="FuturaDentalModel.Store.Users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users_Locations" EntityType="FuturaDentalModel.Store.Users_Locations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users_Roles" EntityType="FuturaDentalModel.Store.Users_Roles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Workers" EntityType="FuturaDentalModel.Store.Workers" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WorkGroups" EntityType="FuturaDentalModel.Store.WorkGroups" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WorkMarks" EntityType="FuturaDentalModel.Store.WorkMarks" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Works" EntityType="FuturaDentalModel.Store.Works" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WorksComments" EntityType="FuturaDentalModel.Store.WorksComments" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WorksDetails" EntityType="FuturaDentalModel.Store.WorksDetails" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WorksPositions" EntityType="FuturaDentalModel.Store.WorksPositions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WorkTypes" EntityType="FuturaDentalModel.Store.WorkTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DoctorsInfo" EntityType="FuturaDentalModel.Store.DoctorsInfo" store:Type="Views" store:Schema="dbo" store:Name="DoctorsInfo">
+            <DefiningQuery>SELECT 
+      [DoctorsInfo].[ID] AS [ID], 
+      [DoctorsInfo].[OrdinationID] AS [OrdinationID], 
+      [DoctorsInfo].[FirstName] AS [FirstName], 
+      [DoctorsInfo].[LastName] AS [LastName], 
+      [DoctorsInfo].[Title] AS [Title], 
+      [DoctorsInfo].[Archived] AS [Archived], 
+      [DoctorsInfo].[OrdinationName] AS [OrdinationName]
+      FROM [dbo].[DoctorsInfo] AS [DoctorsInfo]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="LaboratoriesInfo" EntityType="FuturaDentalModel.Store.LaboratoriesInfo" store:Type="Views" store:Schema="dbo" store:Name="LaboratoriesInfo">
+            <DefiningQuery>SELECT 
+      [LaboratoriesInfo].[ID] AS [ID], 
+      [LaboratoriesInfo].[Name] AS [Name], 
+      [LaboratoriesInfo].[Archived] AS [Archived], 
+      [LaboratoriesInfo].[OrganizationID] AS [OrganizationID], 
+      [LaboratoriesInfo].[OrganizationName] AS [OrganizationName]
+      FROM [dbo].[LaboratoriesInfo] AS [LaboratoriesInfo]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="OrdinationsInfo" EntityType="FuturaDentalModel.Store.OrdinationsInfo" store:Type="Views" store:Schema="dbo" store:Name="OrdinationsInfo">
+            <DefiningQuery>SELECT 
+      [OrdinationsInfo].[ID] AS [ID], 
+      [OrdinationsInfo].[Name] AS [Name], 
+      [OrdinationsInfo].[Archived] AS [Archived], 
+      [OrdinationsInfo].[OrganizationID] AS [OrganizationID], 
+      [OrdinationsInfo].[OrganizationName] AS [OrganizationName]
+      FROM [dbo].[OrdinationsInfo] AS [OrdinationsInfo]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="UsersInfo" EntityType="FuturaDentalModel.Store.UsersInfo" store:Type="Views" store:Schema="dbo" store:Name="UsersInfo">
+            <DefiningQuery>SELECT 
+      [UsersInfo].[ID] AS [ID], 
+      [UsersInfo].[Username] AS [Username], 
+      [UsersInfo].[Password] AS [Password], 
+      [UsersInfo].[Email] AS [Email], 
+      [UsersInfo].[FirstName] AS [FirstName], 
+      [UsersInfo].[LastName] AS [LastName], 
+      [UsersInfo].[Archived] AS [Archived], 
+      [UsersInfo].[OrganizationID] AS [OrganizationID], 
+      [UsersInfo].[OrganizationName] AS [OrganizationName]
+      FROM [dbo].[UsersInfo] AS [UsersInfo]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WorksCommentsInfo" EntityType="FuturaDentalModel.Store.WorksCommentsInfo" store:Type="Views" store:Schema="dbo" store:Name="WorksCommentsInfo">
+            <DefiningQuery>SELECT 
+      [WorksCommentsInfo].[ID] AS [ID], 
+      [WorksCommentsInfo].[WorkID] AS [WorkID], 
+      [WorksCommentsInfo].[Comment] AS [Comment], 
+      [WorksCommentsInfo].[UserID] AS [UserID], 
+      [WorksCommentsInfo].[InsertTime] AS [InsertTime], 
+      [WorksCommentsInfo].[UserFirstName] AS [UserFirstName], 
+      [WorksCommentsInfo].[UserLastName] AS [UserLastName], 
+      [WorksCommentsInfo].[UserEmail] AS [UserEmail]
+      FROM [dbo].[WorksCommentsInfo] AS [WorksCommentsInfo]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WorksInfo" EntityType="FuturaDentalModel.Store.WorksInfo" store:Type="Views" store:Schema="dbo" store:Name="WorksInfo">
+            <DefiningQuery>SELECT 
+      [WorksInfo].[ID] AS [ID], 
+      [WorksInfo].[LaboratoryID] AS [LaboratoryID], 
+      [WorksInfo].[OrdinationID] AS [OrdinationID], 
+      [WorksInfo].[DoctorID] AS [DoctorID], 
+      [WorksInfo].[PatientName] AS [PatientName], 
+      [WorksInfo].[PatientAddress] AS [PatientAddress], 
+      [WorksInfo].[PatientPhone] AS [PatientPhone], 
+      [WorksInfo].[Notes] AS [Notes], 
+      [WorksInfo].[Status] AS [Status], 
+      [WorksInfo].[LocationID] AS [LocationID], 
+      [WorksInfo].[UserID] AS [UserID], 
+      [WorksInfo].[InsertTime] AS [InsertTime], 
+      [WorksInfo].[Priority] AS [Priority], 
+      [WorksInfo].[RequestedTestTime] AS [RequestedTestTime], 
+      [WorksInfo].[RequestedFinishTime] AS [RequestedFinishTime], 
+      [WorksInfo].[LaboratoryName] AS [LaboratoryName], 
+      [WorksInfo].[OrdinationName] AS [OrdinationName], 
+      [WorksInfo].[DoctorFirstName] AS [DoctorFirstName], 
+      [WorksInfo].[DoctorLastName] AS [DoctorLastName], 
+      [WorksInfo].[DoctorTitle] AS [DoctorTitle], 
+      [WorksInfo].[LocationName] AS [LocationName], 
+      [WorksInfo].[UserFirstName] AS [UserFirstName], 
+      [WorksInfo].[UserLastName] AS [UserLastName]
+      FROM [dbo].[WorksInfo] AS [WorksInfo]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WorksPositionsInfo" EntityType="FuturaDentalModel.Store.WorksPositionsInfo" store:Type="Views" store:Schema="dbo" store:Name="WorksPositionsInfo">
+            <DefiningQuery>SELECT 
+      [WorksPositionsInfo].[ID] AS [ID], 
+      [WorksPositionsInfo].[WorkID] AS [WorkID], 
+      [WorksPositionsInfo].[Position] AS [Position], 
+      [WorksPositionsInfo].[WorkTypeID] AS [WorkTypeID], 
+      [WorksPositionsInfo].[BridgeID] AS [BridgeID], 
+      [WorksPositionsInfo].[BridgePosition] AS [BridgePosition], 
+      [WorksPositionsInfo].[WorkTypeParentID] AS [WorkTypeParentID], 
+      [WorksPositionsInfo].[WorkTypeName] AS [WorkTypeName], 
+      [WorksPositionsInfo].[Comment] AS [Comment], 
+      [WorksPositionsInfo].[StateID] AS [StateID], 
+      [WorksPositionsInfo].[WorkMarkID] AS [WorkMarkID], 
+      [WorksPositionsInfo].[WorkMarkName] AS [WorkMarkName], 
+      [WorksPositionsInfo].[StateName] AS [StateName]
+      FROM [dbo].[WorksPositionsInfo] AS [WorksPositionsInfo]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WorkTypesInfo" EntityType="FuturaDentalModel.Store.WorkTypesInfo" store:Type="Views" store:Schema="dbo" store:Name="WorkTypesInfo">
+            <DefiningQuery>SELECT 
+      [WorkTypesInfo].[ID] AS [ID], 
+      [WorkTypesInfo].[ParentID] AS [ParentID], 
+      [WorkTypesInfo].[Name] AS [Name], 
+      [WorkTypesInfo].[Archived] AS [Archived], 
+      [WorkTypesInfo].[OrganizationID] AS [OrganizationID], 
+      [WorkTypesInfo].[OrganizationName] AS [OrganizationName], 
+      [WorkTypesInfo].[ParentName] AS [ParentName]
+      FROM [dbo].[WorkTypesInfo] AS [WorkTypesInfo]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Actions_Actions" Association="FuturaDentalModel.Store.FK_Actions_Actions">
+            <End Role="Actions" EntitySet="Actions" />
+            <End Role="Actions1" EntitySet="Actions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Doctors_Ordinations" Association="FuturaDentalModel.Store.FK_Doctors_Ordinations">
+            <End Role="Ordinations" EntitySet="Ordinations" />
+            <End Role="Doctors" EntitySet="Doctors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Laboratories_Organizations" Association="FuturaDentalModel.Store.FK_Laboratories_Organizations">
+            <End Role="Organizations" EntitySet="Organizations" />
+            <End Role="Laboratories" EntitySet="Laboratories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Locations_Laboratories_Laboratories" Association="FuturaDentalModel.Store.FK_Locations_Laboratories_Laboratories">
+            <End Role="Laboratories" EntitySet="Laboratories" />
+            <End Role="Locations_Laboratories" EntitySet="Locations_Laboratories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Locations_Laboratories_Locations" Association="FuturaDentalModel.Store.FK_Locations_Laboratories_Locations">
+            <End Role="Locations" EntitySet="Locations" />
+            <End Role="Locations_Laboratories" EntitySet="Locations_Laboratories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Locations_Ordinations_Locations" Association="FuturaDentalModel.Store.FK_Locations_Ordinations_Locations">
+            <End Role="Locations" EntitySet="Locations" />
+            <End Role="Locations_Ordinations" EntitySet="Locations_Ordinations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Locations_Ordinations_Ordinations" Association="FuturaDentalModel.Store.FK_Locations_Ordinations_Ordinations">
+            <End Role="Ordinations" EntitySet="Ordinations" />
+            <End Role="Locations_Ordinations" EntitySet="Locations_Ordinations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Locations_Organizations" Association="FuturaDentalModel.Store.FK_Locations_Organizations">
+            <End Role="Organizations" EntitySet="Organizations" />
+            <End Role="Locations" EntitySet="Locations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ordinations_Organizations" Association="FuturaDentalModel.Store.FK_Ordinations_Organizations">
+            <End Role="Organizations" EntitySet="Organizations" />
+            <End Role="Ordinations" EntitySet="Ordinations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PositionStates_Organizations" Association="FuturaDentalModel.Store.FK_PositionStates_Organizations">
+            <End Role="Organizations" EntitySet="Organizations" />
+            <End Role="PositionStates" EntitySet="PositionStates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resources_Languages" Association="FuturaDentalModel.Store.FK_Resources_Languages">
+            <End Role="Languages" EntitySet="Languages" />
+            <End Role="Resources" EntitySet="Resources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Roles_Actions_Actions" Association="FuturaDentalModel.Store.FK_Roles_Actions_Actions">
+            <End Role="Actions" EntitySet="Actions" />
+            <End Role="Roles_Actions" EntitySet="Roles_Actions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Roles_Actions_Roles" Association="FuturaDentalModel.Store.FK_Roles_Actions_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Roles_Actions" EntitySet="Roles_Actions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Settings_Currencies" Association="FuturaDentalModel.Store.FK_Settings_Currencies">
+            <End Role="Currencies" EntitySet="Currencies" />
+            <End Role="Settings" EntitySet="Settings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Settings_Languages" Association="FuturaDentalModel.Store.FK_Settings_Languages">
+            <End Role="Languages" EntitySet="Languages" />
+            <End Role="Settings" EntitySet="Settings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Settings_Organizations" Association="FuturaDentalModel.Store.FK_Settings_Organizations">
+            <End Role="Organizations" EntitySet="Organizations" />
+            <End Role="Settings" EntitySet="Settings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Locations_Locations" Association="FuturaDentalModel.Store.FK_Users_Locations_Locations">
+            <End Role="Locations" EntitySet="Locations" />
+            <End Role="Users_Locations" EntitySet="Users_Locations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Locations_Users" Association="FuturaDentalModel.Store.FK_Users_Locations_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Users_Locations" EntitySet="Users_Locations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Organizations" Association="FuturaDentalModel.Store.FK_Users_Organizations">
+            <End Role="Organizations" EntitySet="Organizations" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Roles_Roles" Association="FuturaDentalModel.Store.FK_Users_Roles_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Users_Roles" EntitySet="Users_Roles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Roles_Users" Association="FuturaDentalModel.Store.FK_Users_Roles_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Users_Roles" EntitySet="Users_Roles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Workers_Laboratories" Association="FuturaDentalModel.Store.FK_Workers_Laboratories">
+            <End Role="Laboratories" EntitySet="Laboratories" />
+            <End Role="Workers" EntitySet="Workers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Works_Doctors" Association="FuturaDentalModel.Store.FK_Works_Doctors">
+            <End Role="Doctors" EntitySet="Doctors" />
+            <End Role="Works" EntitySet="Works" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Works_Laboratories" Association="FuturaDentalModel.Store.FK_Works_Laboratories">
+            <End Role="Laboratories" EntitySet="Laboratories" />
+            <End Role="Works" EntitySet="Works" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Works_Locations" Association="FuturaDentalModel.Store.FK_Works_Locations">
+            <End Role="Locations" EntitySet="Locations" />
+            <End Role="Works" EntitySet="Works" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Works_Ordinations" Association="FuturaDentalModel.Store.FK_Works_Ordinations">
+            <End Role="Ordinations" EntitySet="Ordinations" />
+            <End Role="Works" EntitySet="Works" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Works_Users" Association="FuturaDentalModel.Store.FK_Works_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Works" EntitySet="Works" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorksComments_Users" Association="FuturaDentalModel.Store.FK_WorksComments_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="WorksComments" EntitySet="WorksComments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorksComments_Works" Association="FuturaDentalModel.Store.FK_WorksComments_Works">
+            <End Role="Works" EntitySet="Works" />
+            <End Role="WorksComments" EntitySet="WorksComments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorksDetails_Works" Association="FuturaDentalModel.Store.FK_WorksDetails_Works">
+            <End Role="Works" EntitySet="Works" />
+            <End Role="WorksDetails" EntitySet="WorksDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorksDetails_WorkTypes" Association="FuturaDentalModel.Store.FK_WorksDetails_WorkTypes">
+            <End Role="WorkTypes" EntitySet="WorkTypes" />
+            <End Role="WorksDetails" EntitySet="WorksDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorksPositions_PositionStates" Association="FuturaDentalModel.Store.FK_WorksPositions_PositionStates">
+            <End Role="PositionStates" EntitySet="PositionStates" />
+            <End Role="WorksPositions" EntitySet="WorksPositions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorksPositions_WorkMarks" Association="FuturaDentalModel.Store.FK_WorksPositions_WorkMarks">
+            <End Role="WorkMarks" EntitySet="WorkMarks" />
+            <End Role="WorksPositions" EntitySet="WorksPositions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorksPositions_Works" Association="FuturaDentalModel.Store.FK_WorksPositions_Works">
+            <End Role="Works" EntitySet="Works" />
+            <End Role="WorksPositions" EntitySet="WorksPositions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorksPositions_WorkTypes" Association="FuturaDentalModel.Store.FK_WorksPositions_WorkTypes">
+            <End Role="WorkTypes" EntitySet="WorkTypes" />
+            <End Role="WorksPositions" EntitySet="WorksPositions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkTypes_Organizations" Association="FuturaDentalModel.Store.FK_WorkTypes_Organizations">
+            <End Role="Organizations" EntitySet="Organizations" />
+            <End Role="WorkTypes" EntitySet="WorkTypes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkTypes_WorkTypes" Association="FuturaDentalModel.Store.FK_WorkTypes_WorkTypes">
+            <End Role="WorkTypes" EntitySet="WorkTypes" />
+            <End Role="WorkTypes1" EntitySet="WorkTypes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Actions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ParentID" Type="int" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar" MaxLength="512" />
+        </EntityType>
+        <EntityType Name="Countries">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="Nationality" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Currencies">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="ISOCode" Type="nvarchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Doctors">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OrdinationID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="500" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archived" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Laboratories">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OrganizationID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="Archived" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Languages">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Locations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OrganizationID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Locations_Laboratories">
+          <Key>
+            <PropertyRef Name="LocationID" />
+            <PropertyRef Name="LaboratoryID" />
+          </Key>
+          <Property Name="LocationID" Type="int" Nullable="false" />
+          <Property Name="LaboratoryID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Locations_Ordinations">
+          <Key>
+            <PropertyRef Name="LocationID" />
+            <PropertyRef Name="OrdinationID" />
+          </Key>
+          <Property Name="LocationID" Type="int" Nullable="false" />
+          <Property Name="OrdinationID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LocationTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Ordinations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OrganizationID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archived" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Organizations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="PositionStates">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="OrganizationID" Type="int" Nullable="false" />
+          <Property Name="Archived" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Resources">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="TableName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FieldName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="LanguageID" Type="int" Nullable="false" />
+          <Property Name="ResourceValue" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Roles_Actions">
+          <Key>
+            <PropertyRef Name="RoleID" />
+            <PropertyRef Name="ActionID" />
+          </Key>
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="ActionID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Settings">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OrganizationID" Type="int" />
+          <Property Name="CurrencyID" Type="int" Nullable="false" />
+          <Property Name="LanguageID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Statuses">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Archived" Type="bit" Nullable="false" />
+          <Property Name="OrganizationID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users_Locations">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="LocationID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="LocationID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users_Roles">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Workers">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="500" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="500" />
+          <Property Name="LaboratoryID" Type="int" />
+          <Property Name="Archived" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WorkGroups">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="WorkMarks">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="Archived" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Works">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LaboratoryID" Type="int" />
+          <Property Name="OrdinationID" Type="int" Nullable="false" />
+          <Property Name="DoctorID" Type="int" />
+          <Property Name="PatientName" Type="nvarchar" MaxLength="500" />
+          <Property Name="PatientAddress" Type="nvarchar" MaxLength="500" />
+          <Property Name="PatientPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="LocationID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="InsertTime" Type="datetime" Nullable="false" />
+          <Property Name="Priority" Type="int" Nullable="false" />
+          <Property Name="RequestedTestTime" Type="datetime" />
+          <Property Name="RequestedFinishTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="WorksComments">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="WorkID" Type="int" Nullable="false" />
+          <Property Name="Comment" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="InsertTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WorksDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="WorkID" Type="int" Nullable="false" />
+          <Property Name="WorkTypeID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Autogenerated" Type="bit" />
+          <Property Name="Quantity" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="WorksPositions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="WorkID" Type="int" Nullable="false" />
+          <Property Name="Position" Type="int" Nullable="false" />
+          <Property Name="StateID" Type="int" Nullable="false" />
+          <Property Name="WorkTypeID" Type="int" />
+          <Property Name="BridgeID" Type="int" />
+          <Property Name="BridgePosition" Type="int" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="500" />
+          <Property Name="WorkMarkID" Type="int" />
+        </EntityType>
+        <EntityType Name="WorkTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ParentID" Type="int" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="OrganizationID" Type="int" Nullable="false" />
+          <Property Name="Archived" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'FuturaDental.dbo.DoctorsInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="DoctorsInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="OrdinationID" />
+            <PropertyRef Name="Archived" />
+            <PropertyRef Name="OrdinationName" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="OrdinationID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="500" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archived" Type="bit" Nullable="false" />
+          <Property Name="OrdinationName" Type="nvarchar" Nullable="false" MaxLength="500" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'FuturaDental.dbo.LaboratoriesInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="LaboratoriesInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Archived" />
+            <PropertyRef Name="OrganizationID" />
+            <PropertyRef Name="OrganizationName" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="Archived" Type="bit" Nullable="false" />
+          <Property Name="OrganizationID" Type="int" Nullable="false" />
+          <Property Name="OrganizationName" Type="nvarchar" Nullable="false" MaxLength="500" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'FuturaDental.dbo.OrdinationsInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="OrdinationsInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Archived" />
+            <PropertyRef Name="OrganizationID" />
+            <PropertyRef Name="OrganizationName" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="Archived" Type="bit" Nullable="false" />
+          <Property Name="OrganizationID" Type="int" Nullable="false" />
+          <Property Name="OrganizationName" Type="nvarchar" Nullable="false" MaxLength="500" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'FuturaDental.dbo.UsersInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="UsersInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Username" />
+            <PropertyRef Name="Password" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="Archived" />
+            <PropertyRef Name="OrganizationID" />
+            <PropertyRef Name="OrganizationName" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Archived" Type="bit" Nullable="false" />
+          <Property Name="OrganizationID" Type="int" Nullable="false" />
+          <Property Name="OrganizationName" Type="nvarchar" Nullable="false" MaxLength="500" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'FuturaDental.dbo.WorksCommentsInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="WorksCommentsInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="WorkID" />
+            <PropertyRef Name="Comment" />
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="InsertTime" />
+            <PropertyRef Name="UserFirstName" />
+            <PropertyRef Name="UserLastName" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="WorkID" Type="int" Nullable="false" />
+          <Property Name="Comment" Type="varchar(max)" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="InsertTime" Type="datetime" Nullable="false" />
+          <Property Name="UserFirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="UserLastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="UserEmail" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'FuturaDental.dbo.WorksInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="WorksInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="OrdinationID" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="LocationID" />
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="InsertTime" />
+            <PropertyRef Name="Priority" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="LaboratoryID" Type="int" />
+          <Property Name="OrdinationID" Type="int" Nullable="false" />
+          <Property Name="DoctorID" Type="int" />
+          <Property Name="PatientName" Type="nvarchar" MaxLength="500" />
+          <Property Name="PatientAddress" Type="nvarchar" MaxLength="500" />
+          <Property Name="PatientPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="LocationID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="InsertTime" Type="datetime" Nullable="false" />
+          <Property Name="Priority" Type="int" Nullable="false" />
+          <Property Name="RequestedTestTime" Type="datetime" />
+          <Property Name="RequestedFinishTime" Type="datetime" />
+          <Property Name="LaboratoryName" Type="nvarchar" MaxLength="500" />
+          <Property Name="OrdinationName" Type="nvarchar" MaxLength="500" />
+          <Property Name="DoctorFirstName" Type="nvarchar" MaxLength="500" />
+          <Property Name="DoctorLastName" Type="nvarchar" MaxLength="500" />
+          <Property Name="DoctorTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="LocationName" Type="nvarchar" MaxLength="500" />
+          <Property Name="UserFirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserLastName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'FuturaDental.dbo.WorksPositionsInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="WorksPositionsInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="WorkID" />
+            <PropertyRef Name="Position" />
+            <PropertyRef Name="StateID" />
+            <PropertyRef Name="StateName" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="WorkID" Type="int" Nullable="false" />
+          <Property Name="Position" Type="int" Nullable="false" />
+          <Property Name="WorkTypeID" Type="int" />
+          <Property Name="BridgeID" Type="int" />
+          <Property Name="BridgePosition" Type="int" />
+          <Property Name="WorkTypeParentID" Type="int" />
+          <Property Name="WorkTypeName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="500" />
+          <Property Name="StateID" Type="int" Nullable="false" />
+          <Property Name="WorkMarkID" Type="int" />
+          <Property Name="WorkMarkName" Type="nvarchar" MaxLength="500" />
+          <Property Name="StateName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'FuturaDental.dbo.WorkTypesInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="WorkTypesInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Archived" />
+            <PropertyRef Name="OrganizationID" />
+            <PropertyRef Name="OrganizationName" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ParentID" Type="int" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="Archived" Type="bit" Nullable="false" />
+          <Property Name="OrganizationID" Type="int" Nullable="false" />
+          <Property Name="OrganizationName" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="ParentName" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <Association Name="FK_Actions_Actions">
+          <End Role="Actions" Type="FuturaDentalModel.Store.Actions" Multiplicity="0..1" />
+          <End Role="Actions1" Type="FuturaDentalModel.Store.Actions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Actions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Actions1">
+              <PropertyRef Name="ParentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Doctors_Ordinations">
+          <End Role="Ordinations" Type="FuturaDentalModel.Store.Ordinations" Multiplicity="1" />
+          <End Role="Doctors" Type="FuturaDentalModel.Store.Doctors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ordinations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Doctors">
+              <PropertyRef Name="OrdinationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Laboratories_Organizations">
+          <End Role="Organizations" Type="FuturaDentalModel.Store.Organizations" Multiplicity="1" />
+          <End Role="Laboratories" Type="FuturaDentalModel.Store.Laboratories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organizations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Laboratories">
+              <PropertyRef Name="OrganizationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Locations_Laboratories_Laboratories">
+          <End Role="Laboratories" Type="FuturaDentalModel.Store.Laboratories" Multiplicity="1" />
+          <End Role="Locations_Laboratories" Type="FuturaDentalModel.Store.Locations_Laboratories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Laboratories">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Locations_Laboratories">
+              <PropertyRef Name="LaboratoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Locations_Laboratories_Locations">
+          <End Role="Locations" Type="FuturaDentalModel.Store.Locations" Multiplicity="1" />
+          <End Role="Locations_Laboratories" Type="FuturaDentalModel.Store.Locations_Laboratories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Locations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Locations_Laboratories">
+              <PropertyRef Name="LocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Locations_Ordinations_Locations">
+          <End Role="Locations" Type="FuturaDentalModel.Store.Locations" Multiplicity="1" />
+          <End Role="Locations_Ordinations" Type="FuturaDentalModel.Store.Locations_Ordinations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Locations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Locations_Ordinations">
+              <PropertyRef Name="LocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Locations_Ordinations_Ordinations">
+          <End Role="Ordinations" Type="FuturaDentalModel.Store.Ordinations" Multiplicity="1" />
+          <End Role="Locations_Ordinations" Type="FuturaDentalModel.Store.Locations_Ordinations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ordinations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Locations_Ordinations">
+              <PropertyRef Name="OrdinationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Locations_Organizations">
+          <End Role="Organizations" Type="FuturaDentalModel.Store.Organizations" Multiplicity="1" />
+          <End Role="Locations" Type="FuturaDentalModel.Store.Locations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organizations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Locations">
+              <PropertyRef Name="OrganizationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ordinations_Organizations">
+          <End Role="Organizations" Type="FuturaDentalModel.Store.Organizations" Multiplicity="1" />
+          <End Role="Ordinations" Type="FuturaDentalModel.Store.Ordinations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organizations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Ordinations">
+              <PropertyRef Name="OrganizationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PositionStates_Organizations">
+          <End Role="Organizations" Type="FuturaDentalModel.Store.Organizations" Multiplicity="1" />
+          <End Role="PositionStates" Type="FuturaDentalModel.Store.PositionStates" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organizations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PositionStates">
+              <PropertyRef Name="OrganizationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resources_Languages">
+          <End Role="Languages" Type="FuturaDentalModel.Store.Languages" Multiplicity="1" />
+          <End Role="Resources" Type="FuturaDentalModel.Store.Resources" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Languages">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Resources">
+              <PropertyRef Name="LanguageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Roles_Actions_Actions">
+          <End Role="Actions" Type="FuturaDentalModel.Store.Actions" Multiplicity="1" />
+          <End Role="Roles_Actions" Type="FuturaDentalModel.Store.Roles_Actions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Actions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Roles_Actions">
+              <PropertyRef Name="ActionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Roles_Actions_Roles">
+          <End Role="Roles" Type="FuturaDentalModel.Store.Roles" Multiplicity="1" />
+          <End Role="Roles_Actions" Type="FuturaDentalModel.Store.Roles_Actions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Roles_Actions">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Settings_Currencies">
+          <End Role="Currencies" Type="FuturaDentalModel.Store.Currencies" Multiplicity="1" />
+          <End Role="Settings" Type="FuturaDentalModel.Store.Settings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currencies">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Settings">
+              <PropertyRef Name="CurrencyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Settings_Languages">
+          <End Role="Languages" Type="FuturaDentalModel.Store.Languages" Multiplicity="1" />
+          <End Role="Settings" Type="FuturaDentalModel.Store.Settings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Languages">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Settings">
+              <PropertyRef Name="LanguageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Settings_Organizations">
+          <End Role="Organizations" Type="FuturaDentalModel.Store.Organizations" Multiplicity="0..1" />
+          <End Role="Settings" Type="FuturaDentalModel.Store.Settings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organizations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Settings">
+              <PropertyRef Name="OrganizationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Locations_Locations">
+          <End Role="Locations" Type="FuturaDentalModel.Store.Locations" Multiplicity="1" />
+          <End Role="Users_Locations" Type="FuturaDentalModel.Store.Users_Locations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Locations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Users_Locations">
+              <PropertyRef Name="LocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Locations_Users">
+          <End Role="Users" Type="FuturaDentalModel.Store.Users" Multiplicity="1" />
+          <End Role="Users_Locations" Type="FuturaDentalModel.Store.Users_Locations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Users_Locations">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Organizations">
+          <End Role="Organizations" Type="FuturaDentalModel.Store.Organizations" Multiplicity="1" />
+          <End Role="Users" Type="FuturaDentalModel.Store.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organizations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="OrganizationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Roles_Roles">
+          <End Role="Roles" Type="FuturaDentalModel.Store.Roles" Multiplicity="1" />
+          <End Role="Users_Roles" Type="FuturaDentalModel.Store.Users_Roles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Users_Roles">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Roles_Users">
+          <End Role="Users" Type="FuturaDentalModel.Store.Users" Multiplicity="1" />
+          <End Role="Users_Roles" Type="FuturaDentalModel.Store.Users_Roles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Users_Roles">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Workers_Laboratories">
+          <End Role="Laboratories" Type="FuturaDentalModel.Store.Laboratories" Multiplicity="0..1" />
+          <End Role="Workers" Type="FuturaDentalModel.Store.Workers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Laboratories">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Workers">
+              <PropertyRef Name="LaboratoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Works_Doctors">
+          <End Role="Doctors" Type="FuturaDentalModel.Store.Doctors" Multiplicity="0..1" />
+          <End Role="Works" Type="FuturaDentalModel.Store.Works" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctors">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Works">
+              <PropertyRef Name="DoctorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Works_Laboratories">
+          <End Role="Laboratories" Type="FuturaDentalModel.Store.Laboratories" Multiplicity="0..1" />
+          <End Role="Works" Type="FuturaDentalModel.Store.Works" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Laboratories">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Works">
+              <PropertyRef Name="LaboratoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Works_Locations">
+          <End Role="Locations" Type="FuturaDentalModel.Store.Locations" Multiplicity="1" />
+          <End Role="Works" Type="FuturaDentalModel.Store.Works" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Locations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Works">
+              <PropertyRef Name="LocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Works_Ordinations">
+          <End Role="Ordinations" Type="FuturaDentalModel.Store.Ordinations" Multiplicity="1" />
+          <End Role="Works" Type="FuturaDentalModel.Store.Works" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ordinations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Works">
+              <PropertyRef Name="OrdinationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Works_Users">
+          <End Role="Users" Type="FuturaDentalModel.Store.Users" Multiplicity="1" />
+          <End Role="Works" Type="FuturaDentalModel.Store.Works" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Works">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorksComments_Users">
+          <End Role="Users" Type="FuturaDentalModel.Store.Users" Multiplicity="1" />
+          <End Role="WorksComments" Type="FuturaDentalModel.Store.WorksComments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorksComments">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorksComments_Works">
+          <End Role="Works" Type="FuturaDentalModel.Store.Works" Multiplicity="1" />
+          <End Role="WorksComments" Type="FuturaDentalModel.Store.WorksComments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Works">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorksComments">
+              <PropertyRef Name="WorkID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorksDetails_Works">
+          <End Role="Works" Type="FuturaDentalModel.Store.Works" Multiplicity="1" />
+          <End Role="WorksDetails" Type="FuturaDentalModel.Store.WorksDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Works">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorksDetails">
+              <PropertyRef Name="WorkID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorksDetails_WorkTypes">
+          <End Role="WorkTypes" Type="FuturaDentalModel.Store.WorkTypes" Multiplicity="0..1" />
+          <End Role="WorksDetails" Type="FuturaDentalModel.Store.WorksDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorksDetails">
+              <PropertyRef Name="WorkTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorksPositions_PositionStates">
+          <End Role="PositionStates" Type="FuturaDentalModel.Store.PositionStates" Multiplicity="1" />
+          <End Role="WorksPositions" Type="FuturaDentalModel.Store.WorksPositions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PositionStates">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorksPositions">
+              <PropertyRef Name="StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorksPositions_WorkMarks">
+          <End Role="WorkMarks" Type="FuturaDentalModel.Store.WorkMarks" Multiplicity="0..1" />
+          <End Role="WorksPositions" Type="FuturaDentalModel.Store.WorksPositions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkMarks">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorksPositions">
+              <PropertyRef Name="WorkMarkID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorksPositions_Works">
+          <End Role="Works" Type="FuturaDentalModel.Store.Works" Multiplicity="1" />
+          <End Role="WorksPositions" Type="FuturaDentalModel.Store.WorksPositions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Works">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorksPositions">
+              <PropertyRef Name="WorkID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorksPositions_WorkTypes">
+          <End Role="WorkTypes" Type="FuturaDentalModel.Store.WorkTypes" Multiplicity="0..1" />
+          <End Role="WorksPositions" Type="FuturaDentalModel.Store.WorksPositions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorksPositions">
+              <PropertyRef Name="WorkTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkTypes_Organizations">
+          <End Role="Organizations" Type="FuturaDentalModel.Store.Organizations" Multiplicity="1" />
+          <End Role="WorkTypes" Type="FuturaDentalModel.Store.WorkTypes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organizations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorkTypes">
+              <PropertyRef Name="OrganizationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkTypes_WorkTypes">
+          <End Role="WorkTypes" Type="FuturaDentalModel.Store.WorkTypes" Multiplicity="0..1" />
+          <End Role="WorkTypes1" Type="FuturaDentalModel.Store.WorkTypes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorkTypes1">
+              <PropertyRef Name="ParentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FuturaDentalModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="FuturaDentalEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Actions" EntityType="FuturaDentalModel.Actions" />
+          <EntitySet Name="Countries" EntityType="FuturaDentalModel.Countries" />
+          <EntitySet Name="Currencies" EntityType="FuturaDentalModel.Currencies" />
+          <EntitySet Name="Doctors" EntityType="FuturaDentalModel.Doctors" />
+          <EntitySet Name="Laboratories" EntityType="FuturaDentalModel.Laboratories" />
+          <EntitySet Name="Languages" EntityType="FuturaDentalModel.Languages" />
+          <EntitySet Name="Locations" EntityType="FuturaDentalModel.Locations" />
+          <EntitySet Name="LocationTypes" EntityType="FuturaDentalModel.LocationTypes" />
+          <EntitySet Name="Ordinations" EntityType="FuturaDentalModel.Ordinations" />
+          <EntitySet Name="Organizations" EntityType="FuturaDentalModel.Organizations" />
+          <EntitySet Name="PositionStates" EntityType="FuturaDentalModel.PositionStates" />
+          <EntitySet Name="Resources" EntityType="FuturaDentalModel.Resources" />
+          <EntitySet Name="Roles" EntityType="FuturaDentalModel.Roles" />
+          <EntitySet Name="Settings" EntityType="FuturaDentalModel.Settings" />
+          <EntitySet Name="Statuses" EntityType="FuturaDentalModel.Statuses" />
+          <EntitySet Name="sysdiagrams" EntityType="FuturaDentalModel.sysdiagrams" />
+          <EntitySet Name="Users" EntityType="FuturaDentalModel.Users" />
+          <EntitySet Name="Workers" EntityType="FuturaDentalModel.Workers" />
+          <EntitySet Name="WorkGroups" EntityType="FuturaDentalModel.WorkGroups" />
+          <EntitySet Name="WorkMarks" EntityType="FuturaDentalModel.WorkMarks" />
+          <EntitySet Name="Works" EntityType="FuturaDentalModel.Works" />
+          <EntitySet Name="WorksComments" EntityType="FuturaDentalModel.WorksComments" />
+          <EntitySet Name="WorksDetails" EntityType="FuturaDentalModel.WorksDetails" />
+          <EntitySet Name="WorksPositions" EntityType="FuturaDentalModel.WorksPositions" />
+          <EntitySet Name="WorkTypes" EntityType="FuturaDentalModel.WorkTypes" />
+          <EntitySet Name="DoctorsInfo" EntityType="FuturaDentalModel.DoctorsInfo" />
+          <EntitySet Name="LaboratoriesInfo" EntityType="FuturaDentalModel.LaboratoriesInfo" />
+          <EntitySet Name="OrdinationsInfo" EntityType="FuturaDentalModel.OrdinationsInfo" />
+          <EntitySet Name="UsersInfo" EntityType="FuturaDentalModel.UsersInfo" />
+          <EntitySet Name="WorksCommentsInfo" EntityType="FuturaDentalModel.WorksCommentsInfo" />
+          <EntitySet Name="WorksInfo" EntityType="FuturaDentalModel.WorksInfo" />
+          <EntitySet Name="WorksPositionsInfo" EntityType="FuturaDentalModel.WorksPositionsInfo" />
+          <EntitySet Name="WorkTypesInfo" EntityType="FuturaDentalModel.WorkTypesInfo" />
+          <AssociationSet Name="FK_Actions_Actions" Association="FuturaDentalModel.FK_Actions_Actions">
+            <End Role="Actions" EntitySet="Actions" />
+            <End Role="Actions1" EntitySet="Actions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Settings_Currencies" Association="FuturaDentalModel.FK_Settings_Currencies">
+            <End Role="Currencies" EntitySet="Currencies" />
+            <End Role="Settings" EntitySet="Settings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Doctors_Ordinations" Association="FuturaDentalModel.FK_Doctors_Ordinations">
+            <End Role="Ordinations" EntitySet="Ordinations" />
+            <End Role="Doctors" EntitySet="Doctors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Works_Doctors" Association="FuturaDentalModel.FK_Works_Doctors">
+            <End Role="Doctors" EntitySet="Doctors" />
+            <End Role="Works" EntitySet="Works" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Laboratories_Organizations" Association="FuturaDentalModel.FK_Laboratories_Organizations">
+            <End Role="Organizations" EntitySet="Organizations" />
+            <End Role="Laboratories" EntitySet="Laboratories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Workers_Laboratories" Association="FuturaDentalModel.FK_Workers_Laboratories">
+            <End Role="Laboratories" EntitySet="Laboratories" />
+            <End Role="Workers" EntitySet="Workers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Works_Laboratories" Association="FuturaDentalModel.FK_Works_Laboratories">
+            <End Role="Laboratories" EntitySet="Laboratories" />
+            <End Role="Works" EntitySet="Works" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resources_Languages" Association="FuturaDentalModel.FK_Resources_Languages">
+            <End Role="Languages" EntitySet="Languages" />
+            <End Role="Resources" EntitySet="Resources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Settings_Languages" Association="FuturaDentalModel.FK_Settings_Languages">
+            <End Role="Languages" EntitySet="Languages" />
+            <End Role="Settings" EntitySet="Settings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Locations_Organizations" Association="FuturaDentalModel.FK_Locations_Organizations">
+            <End Role="Organizations" EntitySet="Organizations" />
+            <End Role="Locations" EntitySet="Locations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Works_Locations" Association="FuturaDentalModel.FK_Works_Locations">
+            <End Role="Locations" EntitySet="Locations" />
+            <End Role="Works" EntitySet="Works" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ordinations_Organizations" Association="FuturaDentalModel.FK_Ordinations_Organizations">
+            <End Role="Organizations" EntitySet="Organizations" />
+            <End Role="Ordinations" EntitySet="Ordinations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Works_Ordinations" Association="FuturaDentalModel.FK_Works_Ordinations">
+            <End Role="Ordinations" EntitySet="Ordinations" />
+            <End Role="Works" EntitySet="Works" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PositionStates_Organizations" Association="FuturaDentalModel.FK_PositionStates_Organizations">
+            <End Role="Organizations" EntitySet="Organizations" />
+            <End Role="PositionStates" EntitySet="PositionStates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Settings_Organizations" Association="FuturaDentalModel.FK_Settings_Organizations">
+            <End Role="Organizations" EntitySet="Organizations" />
+            <End Role="Settings" EntitySet="Settings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Organizations" Association="FuturaDentalModel.FK_Users_Organizations">
+            <End Role="Organizations" EntitySet="Organizations" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkTypes_Organizations" Association="FuturaDentalModel.FK_WorkTypes_Organizations">
+            <End Role="Organizations" EntitySet="Organizations" />
+            <End Role="WorkTypes" EntitySet="WorkTypes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorksPositions_PositionStates" Association="FuturaDentalModel.FK_WorksPositions_PositionStates">
+            <End Role="PositionStates" EntitySet="PositionStates" />
+            <End Role="WorksPositions" EntitySet="WorksPositions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Works_Users" Association="FuturaDentalModel.FK_Works_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Works" EntitySet="Works" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorksComments_Users" Association="FuturaDentalModel.FK_WorksComments_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="WorksComments" EntitySet="WorksComments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorksPositions_WorkMarks" Association="FuturaDentalModel.FK_WorksPositions_WorkMarks">
+            <End Role="WorkMarks" EntitySet="WorkMarks" />
+            <End Role="WorksPositions" EntitySet="WorksPositions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorksComments_Works" Association="FuturaDentalModel.FK_WorksComments_Works">
+            <End Role="Works" EntitySet="Works" />
+            <End Role="WorksComments" EntitySet="WorksComments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorksDetails_Works" Association="FuturaDentalModel.FK_WorksDetails_Works">
+            <End Role="Works" EntitySet="Works" />
+            <End Role="WorksDetails" EntitySet="WorksDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorksPositions_Works" Association="FuturaDentalModel.FK_WorksPositions_Works">
+            <End Role="Works" EntitySet="Works" />
+            <End Role="WorksPositions" EntitySet="WorksPositions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorksDetails_WorkTypes" Association="FuturaDentalModel.FK_WorksDetails_WorkTypes">
+            <End Role="WorkTypes" EntitySet="WorkTypes" />
+            <End Role="WorksDetails" EntitySet="WorksDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorksPositions_WorkTypes" Association="FuturaDentalModel.FK_WorksPositions_WorkTypes">
+            <End Role="WorkTypes" EntitySet="WorkTypes" />
+            <End Role="WorksPositions" EntitySet="WorksPositions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WorkTypes_WorkTypes" Association="FuturaDentalModel.FK_WorkTypes_WorkTypes">
+            <End Role="WorkTypes" EntitySet="WorkTypes" />
+            <End Role="WorkTypes1" EntitySet="WorkTypes" />
+          </AssociationSet>
+          <AssociationSet Name="Locations_Laboratories" Association="FuturaDentalModel.Locations_Laboratories">
+            <End Role="Laboratories" EntitySet="Laboratories" />
+            <End Role="Locations" EntitySet="Locations" />
+          </AssociationSet>
+          <AssociationSet Name="Locations_Ordinations" Association="FuturaDentalModel.Locations_Ordinations">
+            <End Role="Locations" EntitySet="Locations" />
+            <End Role="Ordinations" EntitySet="Ordinations" />
+          </AssociationSet>
+          <AssociationSet Name="Roles_Actions" Association="FuturaDentalModel.Roles_Actions">
+            <End Role="Actions" EntitySet="Actions" />
+            <End Role="Roles" EntitySet="Roles" />
+          </AssociationSet>
+          <AssociationSet Name="Users_Locations" Association="FuturaDentalModel.Users_Locations">
+            <End Role="Locations" EntitySet="Locations" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="Users_Roles" Association="FuturaDentalModel.Users_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Actions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentID" Type="Int32" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="512" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Actions1" Relationship="FuturaDentalModel.FK_Actions_Actions" FromRole="Actions" ToRole="Actions1" />
+          <NavigationProperty Name="Actions2" Relationship="FuturaDentalModel.FK_Actions_Actions" FromRole="Actions1" ToRole="Actions" />
+          <NavigationProperty Name="Roles" Relationship="FuturaDentalModel.Roles_Actions" FromRole="Actions" ToRole="Roles" />
+        </EntityType>
+        <EntityType Name="Countries">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Nationality" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Currencies">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ISOCode" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Settings" Relationship="FuturaDentalModel.FK_Settings_Currencies" FromRole="Currencies" ToRole="Settings" />
+        </EntityType>
+        <EntityType Name="Doctors">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="OrdinationID" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Title" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Archived" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Ordinations" Relationship="FuturaDentalModel.FK_Doctors_Ordinations" FromRole="Doctors" ToRole="Ordinations" />
+          <NavigationProperty Name="Works" Relationship="FuturaDentalModel.FK_Works_Doctors" FromRole="Doctors" ToRole="Works" />
+        </EntityType>
+        <EntityType Name="Laboratories">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="OrganizationID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Archived" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Organizations" Relationship="FuturaDentalModel.FK_Laboratories_Organizations" FromRole="Laboratories" ToRole="Organizations" />
+          <NavigationProperty Name="Workers" Relationship="FuturaDentalModel.FK_Workers_Laboratories" FromRole="Laboratories" ToRole="Workers" />
+          <NavigationProperty Name="Works" Relationship="FuturaDentalModel.FK_Works_Laboratories" FromRole="Laboratories" ToRole="Works" />
+          <NavigationProperty Name="Locations" Relationship="FuturaDentalModel.Locations_Laboratories" FromRole="Laboratories" ToRole="Locations" />
+        </EntityType>
+        <EntityType Name="Languages">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Resources" Relationship="FuturaDentalModel.FK_Resources_Languages" FromRole="Languages" ToRole="Resources" />
+          <NavigationProperty Name="Settings" Relationship="FuturaDentalModel.FK_Settings_Languages" FromRole="Languages" ToRole="Settings" />
+        </EntityType>
+        <EntityType Name="Locations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="OrganizationID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Organizations" Relationship="FuturaDentalModel.FK_Locations_Organizations" FromRole="Locations" ToRole="Organizations" />
+          <NavigationProperty Name="Works" Relationship="FuturaDentalModel.FK_Works_Locations" FromRole="Locations" ToRole="Works" />
+          <NavigationProperty Name="Laboratories" Relationship="FuturaDentalModel.Locations_Laboratories" FromRole="Locations" ToRole="Laboratories" />
+          <NavigationProperty Name="Ordinations" Relationship="FuturaDentalModel.Locations_Ordinations" FromRole="Locations" ToRole="Ordinations" />
+          <NavigationProperty Name="Users" Relationship="FuturaDentalModel.Users_Locations" FromRole="Locations" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="LocationTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Ordinations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="OrganizationID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Telephone" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Archived" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Doctors" Relationship="FuturaDentalModel.FK_Doctors_Ordinations" FromRole="Ordinations" ToRole="Doctors" />
+          <NavigationProperty Name="Organizations" Relationship="FuturaDentalModel.FK_Ordinations_Organizations" FromRole="Ordinations" ToRole="Organizations" />
+          <NavigationProperty Name="Works" Relationship="FuturaDentalModel.FK_Works_Ordinations" FromRole="Ordinations" ToRole="Works" />
+          <NavigationProperty Name="Locations" Relationship="FuturaDentalModel.Locations_Ordinations" FromRole="Ordinations" ToRole="Locations" />
+        </EntityType>
+        <EntityType Name="Organizations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Laboratories" Relationship="FuturaDentalModel.FK_Laboratories_Organizations" FromRole="Organizations" ToRole="Laboratories" />
+          <NavigationProperty Name="Locations" Relationship="FuturaDentalModel.FK_Locations_Organizations" FromRole="Organizations" ToRole="Locations" />
+          <NavigationProperty Name="Ordinations" Relationship="FuturaDentalModel.FK_Ordinations_Organizations" FromRole="Organizations" ToRole="Ordinations" />
+          <NavigationProperty Name="PositionStates" Relationship="FuturaDentalModel.FK_PositionStates_Organizations" FromRole="Organizations" ToRole="PositionStates" />
+          <NavigationProperty Name="Settings" Relationship="FuturaDentalModel.FK_Settings_Organizations" FromRole="Organizations" ToRole="Settings" />
+          <NavigationProperty Name="Users" Relationship="FuturaDentalModel.FK_Users_Organizations" FromRole="Organizations" ToRole="Users" />
+          <NavigationProperty Name="WorkTypes" Relationship="FuturaDentalModel.FK_WorkTypes_Organizations" FromRole="Organizations" ToRole="WorkTypes" />
+        </EntityType>
+        <EntityType Name="PositionStates">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="OrganizationID" Type="Int32" Nullable="false" />
+          <Property Name="Archived" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Organizations" Relationship="FuturaDentalModel.FK_PositionStates_Organizations" FromRole="PositionStates" ToRole="Organizations" />
+          <NavigationProperty Name="WorksPositions" Relationship="FuturaDentalModel.FK_WorksPositions_PositionStates" FromRole="PositionStates" ToRole="WorksPositions" />
+        </EntityType>
+        <EntityType Name="Resources">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="TableName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FieldName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LanguageID" Type="Int32" Nullable="false" />
+          <Property Name="ResourceValue" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Languages" Relationship="FuturaDentalModel.FK_Resources_Languages" FromRole="Resources" ToRole="Languages" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Actions" Relationship="FuturaDentalModel.Roles_Actions" FromRole="Roles" ToRole="Actions" />
+          <NavigationProperty Name="Users" Relationship="FuturaDentalModel.Users_Roles" FromRole="Roles" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Settings">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="OrganizationID" Type="Int32" />
+          <Property Name="CurrencyID" Type="Int32" Nullable="false" />
+          <Property Name="LanguageID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Currencies" Relationship="FuturaDentalModel.FK_Settings_Currencies" FromRole="Settings" ToRole="Currencies" />
+          <NavigationProperty Name="Languages" Relationship="FuturaDentalModel.FK_Settings_Languages" FromRole="Settings" ToRole="Languages" />
+          <NavigationProperty Name="Organizations" Relationship="FuturaDentalModel.FK_Settings_Organizations" FromRole="Settings" ToRole="Organizations" />
+        </EntityType>
+        <EntityType Name="Statuses">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Archived" Type="Boolean" Nullable="false" />
+          <Property Name="OrganizationID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Organizations" Relationship="FuturaDentalModel.FK_Users_Organizations" FromRole="Users" ToRole="Organizations" />
+          <NavigationProperty Name="Works" Relationship="FuturaDentalModel.FK_Works_Users" FromRole="Users" ToRole="Works" />
+          <NavigationProperty Name="WorksComments" Relationship="FuturaDentalModel.FK_WorksComments_Users" FromRole="Users" ToRole="WorksComments" />
+          <NavigationProperty Name="Locations" Relationship="FuturaDentalModel.Users_Locations" FromRole="Users" ToRole="Locations" />
+          <NavigationProperty Name="Roles" Relationship="FuturaDentalModel.Users_Roles" FromRole="Users" ToRole="Roles" />
+        </EntityType>
+        <EntityType Name="Workers">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="LaboratoryID" Type="Int32" />
+          <Property Name="Archived" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Laboratories" Relationship="FuturaDentalModel.FK_Workers_Laboratories" FromRole="Workers" ToRole="Laboratories" />
+        </EntityType>
+        <EntityType Name="WorkGroups">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="WorkMarks">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Archived" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="WorksPositions" Relationship="FuturaDentalModel.FK_WorksPositions_WorkMarks" FromRole="WorkMarks" ToRole="WorksPositions" />
+        </EntityType>
+        <EntityType Name="Works">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="LaboratoryID" Type="Int32" />
+          <Property Name="OrdinationID" Type="Int32" Nullable="false" />
+          <Property Name="DoctorID" Type="Int32" />
+          <Property Name="PatientName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="PatientAddress" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="PatientPhone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="LocationID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="InsertTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Priority" Type="Int32" Nullable="false" />
+          <Property Name="RequestedTestTime" Type="DateTime" Precision="3" />
+          <Property Name="RequestedFinishTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Doctors" Relationship="FuturaDentalModel.FK_Works_Doctors" FromRole="Works" ToRole="Doctors" />
+          <NavigationProperty Name="Laboratories" Relationship="FuturaDentalModel.FK_Works_Laboratories" FromRole="Works" ToRole="Laboratories" />
+          <NavigationProperty Name="Locations" Relationship="FuturaDentalModel.FK_Works_Locations" FromRole="Works" ToRole="Locations" />
+          <NavigationProperty Name="Ordinations" Relationship="FuturaDentalModel.FK_Works_Ordinations" FromRole="Works" ToRole="Ordinations" />
+          <NavigationProperty Name="Users" Relationship="FuturaDentalModel.FK_Works_Users" FromRole="Works" ToRole="Users" />
+          <NavigationProperty Name="WorksComments" Relationship="FuturaDentalModel.FK_WorksComments_Works" FromRole="Works" ToRole="WorksComments" />
+          <NavigationProperty Name="WorksDetails" Relationship="FuturaDentalModel.FK_WorksDetails_Works" FromRole="Works" ToRole="WorksDetails" />
+          <NavigationProperty Name="WorksPositions" Relationship="FuturaDentalModel.FK_WorksPositions_Works" FromRole="Works" ToRole="WorksPositions" />
+        </EntityType>
+        <EntityType Name="WorksComments">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkID" Type="Int32" Nullable="false" />
+          <Property Name="Comment" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="InsertTime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Users" Relationship="FuturaDentalModel.FK_WorksComments_Users" FromRole="WorksComments" ToRole="Users" />
+          <NavigationProperty Name="Works" Relationship="FuturaDentalModel.FK_WorksComments_Works" FromRole="WorksComments" ToRole="Works" />
+        </EntityType>
+        <EntityType Name="WorksDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkID" Type="Int32" Nullable="false" />
+          <Property Name="WorkTypeID" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Autogenerated" Type="Boolean" />
+          <Property Name="Quantity" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Works" Relationship="FuturaDentalModel.FK_WorksDetails_Works" FromRole="WorksDetails" ToRole="Works" />
+          <NavigationProperty Name="WorkTypes" Relationship="FuturaDentalModel.FK_WorksDetails_WorkTypes" FromRole="WorksDetails" ToRole="WorkTypes" />
+        </EntityType>
+        <EntityType Name="WorksPositions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkID" Type="Int32" Nullable="false" />
+          <Property Name="Position" Type="Int32" Nullable="false" />
+          <Property Name="StateID" Type="Int32" Nullable="false" />
+          <Property Name="WorkTypeID" Type="Int32" />
+          <Property Name="BridgeID" Type="Int32" />
+          <Property Name="BridgePosition" Type="Int32" />
+          <Property Name="Comment" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="WorkMarkID" Type="Int32" />
+          <NavigationProperty Name="PositionStates" Relationship="FuturaDentalModel.FK_WorksPositions_PositionStates" FromRole="WorksPositions" ToRole="PositionStates" />
+          <NavigationProperty Name="WorkMarks" Relationship="FuturaDentalModel.FK_WorksPositions_WorkMarks" FromRole="WorksPositions" ToRole="WorkMarks" />
+          <NavigationProperty Name="Works" Relationship="FuturaDentalModel.FK_WorksPositions_Works" FromRole="WorksPositions" ToRole="Works" />
+          <NavigationProperty Name="WorkTypes" Relationship="FuturaDentalModel.FK_WorksPositions_WorkTypes" FromRole="WorksPositions" ToRole="WorkTypes" />
+        </EntityType>
+        <EntityType Name="WorkTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentID" Type="Int32" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="OrganizationID" Type="Int32" Nullable="false" />
+          <Property Name="Archived" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Organizations" Relationship="FuturaDentalModel.FK_WorkTypes_Organizations" FromRole="WorkTypes" ToRole="Organizations" />
+          <NavigationProperty Name="WorksDetails" Relationship="FuturaDentalModel.FK_WorksDetails_WorkTypes" FromRole="WorkTypes" ToRole="WorksDetails" />
+          <NavigationProperty Name="WorksPositions" Relationship="FuturaDentalModel.FK_WorksPositions_WorkTypes" FromRole="WorkTypes" ToRole="WorksPositions" />
+          <NavigationProperty Name="WorkTypes1" Relationship="FuturaDentalModel.FK_WorkTypes_WorkTypes" FromRole="WorkTypes" ToRole="WorkTypes1" />
+          <NavigationProperty Name="WorkTypes2" Relationship="FuturaDentalModel.FK_WorkTypes_WorkTypes" FromRole="WorkTypes1" ToRole="WorkTypes" />
+        </EntityType>
+        <EntityType Name="DoctorsInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="OrdinationID" />
+            <PropertyRef Name="Archived" />
+            <PropertyRef Name="OrdinationName" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="OrdinationID" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Title" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Archived" Type="Boolean" Nullable="false" />
+          <Property Name="OrdinationName" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="LaboratoriesInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Archived" />
+            <PropertyRef Name="OrganizationID" />
+            <PropertyRef Name="OrganizationName" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Archived" Type="Boolean" Nullable="false" />
+          <Property Name="OrganizationID" Type="Int32" Nullable="false" />
+          <Property Name="OrganizationName" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="OrdinationsInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Archived" />
+            <PropertyRef Name="OrganizationID" />
+            <PropertyRef Name="OrganizationName" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Archived" Type="Boolean" Nullable="false" />
+          <Property Name="OrganizationID" Type="Int32" Nullable="false" />
+          <Property Name="OrganizationName" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="UsersInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Username" />
+            <PropertyRef Name="Password" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="Archived" />
+            <PropertyRef Name="OrganizationID" />
+            <PropertyRef Name="OrganizationName" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Archived" Type="Boolean" Nullable="false" />
+          <Property Name="OrganizationID" Type="Int32" Nullable="false" />
+          <Property Name="OrganizationName" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="WorksCommentsInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="WorkID" />
+            <PropertyRef Name="Comment" />
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="InsertTime" />
+            <PropertyRef Name="UserFirstName" />
+            <PropertyRef Name="UserLastName" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="WorkID" Type="Int32" Nullable="false" />
+          <Property Name="Comment" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="InsertTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UserFirstName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="UserLastName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="UserEmail" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="WorksInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="OrdinationID" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="LocationID" />
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="InsertTime" />
+            <PropertyRef Name="Priority" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="LaboratoryID" Type="Int32" />
+          <Property Name="OrdinationID" Type="Int32" Nullable="false" />
+          <Property Name="DoctorID" Type="Int32" />
+          <Property Name="PatientName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="PatientAddress" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="PatientPhone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="LocationID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="InsertTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Priority" Type="Int32" Nullable="false" />
+          <Property Name="RequestedTestTime" Type="DateTime" Precision="3" />
+          <Property Name="RequestedFinishTime" Type="DateTime" Precision="3" />
+          <Property Name="LaboratoryName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="OrdinationName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DoctorFirstName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DoctorLastName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DoctorTitle" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LocationName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="UserFirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="UserLastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="WorksPositionsInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="WorkID" />
+            <PropertyRef Name="Position" />
+            <PropertyRef Name="StateID" />
+            <PropertyRef Name="StateName" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="WorkID" Type="Int32" Nullable="false" />
+          <Property Name="Position" Type="Int32" Nullable="false" />
+          <Property Name="WorkTypeID" Type="Int32" />
+          <Property Name="BridgeID" Type="Int32" />
+          <Property Name="BridgePosition" Type="Int32" />
+          <Property Name="WorkTypeParentID" Type="Int32" />
+          <Property Name="WorkTypeName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Comment" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="StateID" Type="Int32" Nullable="false" />
+          <Property Name="WorkMarkID" Type="Int32" />
+          <Property Name="WorkMarkName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="StateName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="WorkTypesInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Archived" />
+            <PropertyRef Name="OrganizationID" />
+            <PropertyRef Name="OrganizationName" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ParentID" Type="Int32" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Archived" Type="Boolean" Nullable="false" />
+          <Property Name="OrganizationID" Type="Int32" Nullable="false" />
+          <Property Name="OrganizationName" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="ParentName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_Actions_Actions">
+          <End Role="Actions" Type="FuturaDentalModel.Actions" Multiplicity="0..1" />
+          <End Role="Actions1" Type="FuturaDentalModel.Actions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Actions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Actions1">
+              <PropertyRef Name="ParentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Settings_Currencies">
+          <End Role="Currencies" Type="FuturaDentalModel.Currencies" Multiplicity="1" />
+          <End Role="Settings" Type="FuturaDentalModel.Settings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currencies">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Settings">
+              <PropertyRef Name="CurrencyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Doctors_Ordinations">
+          <End Role="Ordinations" Type="FuturaDentalModel.Ordinations" Multiplicity="1" />
+          <End Role="Doctors" Type="FuturaDentalModel.Doctors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ordinations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Doctors">
+              <PropertyRef Name="OrdinationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Works_Doctors">
+          <End Role="Doctors" Type="FuturaDentalModel.Doctors" Multiplicity="0..1" />
+          <End Role="Works" Type="FuturaDentalModel.Works" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctors">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Works">
+              <PropertyRef Name="DoctorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Laboratories_Organizations">
+          <End Role="Organizations" Type="FuturaDentalModel.Organizations" Multiplicity="1" />
+          <End Role="Laboratories" Type="FuturaDentalModel.Laboratories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organizations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Laboratories">
+              <PropertyRef Name="OrganizationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Workers_Laboratories">
+          <End Role="Laboratories" Type="FuturaDentalModel.Laboratories" Multiplicity="0..1" />
+          <End Role="Workers" Type="FuturaDentalModel.Workers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Laboratories">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Workers">
+              <PropertyRef Name="LaboratoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Works_Laboratories">
+          <End Role="Laboratories" Type="FuturaDentalModel.Laboratories" Multiplicity="0..1" />
+          <End Role="Works" Type="FuturaDentalModel.Works" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Laboratories">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Works">
+              <PropertyRef Name="LaboratoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resources_Languages">
+          <End Role="Languages" Type="FuturaDentalModel.Languages" Multiplicity="1" />
+          <End Role="Resources" Type="FuturaDentalModel.Resources" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Languages">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Resources">
+              <PropertyRef Name="LanguageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Settings_Languages">
+          <End Role="Languages" Type="FuturaDentalModel.Languages" Multiplicity="1" />
+          <End Role="Settings" Type="FuturaDentalModel.Settings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Languages">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Settings">
+              <PropertyRef Name="LanguageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Locations_Organizations">
+          <End Role="Organizations" Type="FuturaDentalModel.Organizations" Multiplicity="1" />
+          <End Role="Locations" Type="FuturaDentalModel.Locations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organizations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Locations">
+              <PropertyRef Name="OrganizationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Works_Locations">
+          <End Role="Locations" Type="FuturaDentalModel.Locations" Multiplicity="1" />
+          <End Role="Works" Type="FuturaDentalModel.Works" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Locations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Works">
+              <PropertyRef Name="LocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ordinations_Organizations">
+          <End Role="Organizations" Type="FuturaDentalModel.Organizations" Multiplicity="1" />
+          <End Role="Ordinations" Type="FuturaDentalModel.Ordinations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organizations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Ordinations">
+              <PropertyRef Name="OrganizationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Works_Ordinations">
+          <End Role="Ordinations" Type="FuturaDentalModel.Ordinations" Multiplicity="1" />
+          <End Role="Works" Type="FuturaDentalModel.Works" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ordinations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Works">
+              <PropertyRef Name="OrdinationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PositionStates_Organizations">
+          <End Role="Organizations" Type="FuturaDentalModel.Organizations" Multiplicity="1" />
+          <End Role="PositionStates" Type="FuturaDentalModel.PositionStates" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organizations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PositionStates">
+              <PropertyRef Name="OrganizationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Settings_Organizations">
+          <End Role="Organizations" Type="FuturaDentalModel.Organizations" Multiplicity="0..1" />
+          <End Role="Settings" Type="FuturaDentalModel.Settings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organizations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Settings">
+              <PropertyRef Name="OrganizationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Organizations">
+          <End Role="Organizations" Type="FuturaDentalModel.Organizations" Multiplicity="1" />
+          <End Role="Users" Type="FuturaDentalModel.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organizations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="OrganizationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkTypes_Organizations">
+          <End Role="Organizations" Type="FuturaDentalModel.Organizations" Multiplicity="1" />
+          <End Role="WorkTypes" Type="FuturaDentalModel.WorkTypes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organizations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorkTypes">
+              <PropertyRef Name="OrganizationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorksPositions_PositionStates">
+          <End Role="PositionStates" Type="FuturaDentalModel.PositionStates" Multiplicity="1" />
+          <End Role="WorksPositions" Type="FuturaDentalModel.WorksPositions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PositionStates">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorksPositions">
+              <PropertyRef Name="StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Works_Users">
+          <End Role="Users" Type="FuturaDentalModel.Users" Multiplicity="1" />
+          <End Role="Works" Type="FuturaDentalModel.Works" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Works">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorksComments_Users">
+          <End Role="Users" Type="FuturaDentalModel.Users" Multiplicity="1" />
+          <End Role="WorksComments" Type="FuturaDentalModel.WorksComments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorksComments">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorksPositions_WorkMarks">
+          <End Role="WorkMarks" Type="FuturaDentalModel.WorkMarks" Multiplicity="0..1" />
+          <End Role="WorksPositions" Type="FuturaDentalModel.WorksPositions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkMarks">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorksPositions">
+              <PropertyRef Name="WorkMarkID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorksComments_Works">
+          <End Role="Works" Type="FuturaDentalModel.Works" Multiplicity="1" />
+          <End Role="WorksComments" Type="FuturaDentalModel.WorksComments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Works">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorksComments">
+              <PropertyRef Name="WorkID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorksDetails_Works">
+          <End Role="Works" Type="FuturaDentalModel.Works" Multiplicity="1" />
+          <End Role="WorksDetails" Type="FuturaDentalModel.WorksDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Works">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorksDetails">
+              <PropertyRef Name="WorkID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorksPositions_Works">
+          <End Role="Works" Type="FuturaDentalModel.Works" Multiplicity="1" />
+          <End Role="WorksPositions" Type="FuturaDentalModel.WorksPositions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Works">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorksPositions">
+              <PropertyRef Name="WorkID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorksDetails_WorkTypes">
+          <End Role="WorkTypes" Type="FuturaDentalModel.WorkTypes" Multiplicity="0..1" />
+          <End Role="WorksDetails" Type="FuturaDentalModel.WorksDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorksDetails">
+              <PropertyRef Name="WorkTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorksPositions_WorkTypes">
+          <End Role="WorkTypes" Type="FuturaDentalModel.WorkTypes" Multiplicity="0..1" />
+          <End Role="WorksPositions" Type="FuturaDentalModel.WorksPositions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorksPositions">
+              <PropertyRef Name="WorkTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WorkTypes_WorkTypes">
+          <End Role="WorkTypes" Type="FuturaDentalModel.WorkTypes" Multiplicity="0..1" />
+          <End Role="WorkTypes1" Type="FuturaDentalModel.WorkTypes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WorkTypes1">
+              <PropertyRef Name="ParentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Locations_Laboratories">
+          <End Role="Laboratories" Type="FuturaDentalModel.Laboratories" Multiplicity="*" />
+          <End Role="Locations" Type="FuturaDentalModel.Locations" Multiplicity="*" />
+        </Association>
+        <Association Name="Locations_Ordinations">
+          <End Role="Locations" Type="FuturaDentalModel.Locations" Multiplicity="*" />
+          <End Role="Ordinations" Type="FuturaDentalModel.Ordinations" Multiplicity="*" />
+        </Association>
+        <Association Name="Roles_Actions">
+          <End Role="Actions" Type="FuturaDentalModel.Actions" Multiplicity="*" />
+          <End Role="Roles" Type="FuturaDentalModel.Roles" Multiplicity="*" />
+        </Association>
+        <Association Name="Users_Locations">
+          <End Role="Locations" Type="FuturaDentalModel.Locations" Multiplicity="*" />
+          <End Role="Users" Type="FuturaDentalModel.Users" Multiplicity="*" />
+        </Association>
+        <Association Name="Users_Roles">
+          <End Role="Roles" Type="FuturaDentalModel.Roles" Multiplicity="*" />
+          <End Role="Users" Type="FuturaDentalModel.Users" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FuturaDentalModelStoreContainer" CdmEntityContainer="FuturaDentalEntities">
+          <EntitySetMapping Name="Actions">
+            <EntityTypeMapping TypeName="FuturaDentalModel.Actions">
+              <MappingFragment StoreEntitySet="Actions">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="FuturaDentalModel.Countries">
+              <MappingFragment StoreEntitySet="Countries">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Currencies">
+            <EntityTypeMapping TypeName="FuturaDentalModel.Currencies">
+              <MappingFragment StoreEntitySet="Currencies">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ISOCode" ColumnName="ISOCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Doctors">
+            <EntityTypeMapping TypeName="FuturaDentalModel.Doctors">
+              <MappingFragment StoreEntitySet="Doctors">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OrdinationID" ColumnName="OrdinationID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Archived" ColumnName="Archived" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Laboratories">
+            <EntityTypeMapping TypeName="FuturaDentalModel.Laboratories">
+              <MappingFragment StoreEntitySet="Laboratories">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Archived" ColumnName="Archived" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Languages">
+            <EntityTypeMapping TypeName="FuturaDentalModel.Languages">
+              <MappingFragment StoreEntitySet="Languages">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Locations">
+            <EntityTypeMapping TypeName="FuturaDentalModel.Locations">
+              <MappingFragment StoreEntitySet="Locations">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LocationTypes">
+            <EntityTypeMapping TypeName="FuturaDentalModel.LocationTypes">
+              <MappingFragment StoreEntitySet="LocationTypes">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ordinations">
+            <EntityTypeMapping TypeName="FuturaDentalModel.Ordinations">
+              <MappingFragment StoreEntitySet="Ordinations">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Archived" ColumnName="Archived" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Organizations">
+            <EntityTypeMapping TypeName="FuturaDentalModel.Organizations">
+              <MappingFragment StoreEntitySet="Organizations">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PositionStates">
+            <EntityTypeMapping TypeName="FuturaDentalModel.PositionStates">
+              <MappingFragment StoreEntitySet="PositionStates">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+                <ScalarProperty Name="Archived" ColumnName="Archived" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Resources">
+            <EntityTypeMapping TypeName="FuturaDentalModel.Resources">
+              <MappingFragment StoreEntitySet="Resources">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TableName" ColumnName="TableName" />
+                <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+                <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+                <ScalarProperty Name="ResourceValue" ColumnName="ResourceValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="FuturaDentalModel.Roles">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Settings">
+            <EntityTypeMapping TypeName="FuturaDentalModel.Settings">
+              <MappingFragment StoreEntitySet="Settings">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+                <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+                <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Statuses">
+            <EntityTypeMapping TypeName="FuturaDentalModel.Statuses">
+              <MappingFragment StoreEntitySet="Statuses">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="FuturaDentalModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="FuturaDentalModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Archived" ColumnName="Archived" />
+                <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Workers">
+            <EntityTypeMapping TypeName="FuturaDentalModel.Workers">
+              <MappingFragment StoreEntitySet="Workers">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="LaboratoryID" ColumnName="LaboratoryID" />
+                <ScalarProperty Name="Archived" ColumnName="Archived" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkGroups">
+            <EntityTypeMapping TypeName="FuturaDentalModel.WorkGroups">
+              <MappingFragment StoreEntitySet="WorkGroups">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkMarks">
+            <EntityTypeMapping TypeName="FuturaDentalModel.WorkMarks">
+              <MappingFragment StoreEntitySet="WorkMarks">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Archived" ColumnName="Archived" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Works">
+            <EntityTypeMapping TypeName="FuturaDentalModel.Works">
+              <MappingFragment StoreEntitySet="Works">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="LaboratoryID" ColumnName="LaboratoryID" />
+                <ScalarProperty Name="OrdinationID" ColumnName="OrdinationID" />
+                <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+                <ScalarProperty Name="PatientName" ColumnName="PatientName" />
+                <ScalarProperty Name="PatientAddress" ColumnName="PatientAddress" />
+                <ScalarProperty Name="PatientPhone" ColumnName="PatientPhone" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="InsertTime" ColumnName="InsertTime" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="RequestedTestTime" ColumnName="RequestedTestTime" />
+                <ScalarProperty Name="RequestedFinishTime" ColumnName="RequestedFinishTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorksComments">
+            <EntityTypeMapping TypeName="FuturaDentalModel.WorksComments">
+              <MappingFragment StoreEntitySet="WorksComments">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="WorkID" ColumnName="WorkID" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="InsertTime" ColumnName="InsertTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorksDetails">
+            <EntityTypeMapping TypeName="FuturaDentalModel.WorksDetails">
+              <MappingFragment StoreEntitySet="WorksDetails">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="WorkID" ColumnName="WorkID" />
+                <ScalarProperty Name="WorkTypeID" ColumnName="WorkTypeID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Autogenerated" ColumnName="Autogenerated" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorksPositions">
+            <EntityTypeMapping TypeName="FuturaDentalModel.WorksPositions">
+              <MappingFragment StoreEntitySet="WorksPositions">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="WorkID" ColumnName="WorkID" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="WorkTypeID" ColumnName="WorkTypeID" />
+                <ScalarProperty Name="BridgeID" ColumnName="BridgeID" />
+                <ScalarProperty Name="BridgePosition" ColumnName="BridgePosition" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="WorkMarkID" ColumnName="WorkMarkID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkTypes">
+            <EntityTypeMapping TypeName="FuturaDentalModel.WorkTypes">
+              <MappingFragment StoreEntitySet="WorkTypes">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+                <ScalarProperty Name="Archived" ColumnName="Archived" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DoctorsInfo">
+            <EntityTypeMapping TypeName="FuturaDentalModel.DoctorsInfo">
+              <MappingFragment StoreEntitySet="DoctorsInfo">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OrdinationID" ColumnName="OrdinationID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Archived" ColumnName="Archived" />
+                <ScalarProperty Name="OrdinationName" ColumnName="OrdinationName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LaboratoriesInfo">
+            <EntityTypeMapping TypeName="FuturaDentalModel.LaboratoriesInfo">
+              <MappingFragment StoreEntitySet="LaboratoriesInfo">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Archived" ColumnName="Archived" />
+                <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+                <ScalarProperty Name="OrganizationName" ColumnName="OrganizationName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrdinationsInfo">
+            <EntityTypeMapping TypeName="FuturaDentalModel.OrdinationsInfo">
+              <MappingFragment StoreEntitySet="OrdinationsInfo">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Archived" ColumnName="Archived" />
+                <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+                <ScalarProperty Name="OrganizationName" ColumnName="OrganizationName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsersInfo">
+            <EntityTypeMapping TypeName="FuturaDentalModel.UsersInfo">
+              <MappingFragment StoreEntitySet="UsersInfo">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Archived" ColumnName="Archived" />
+                <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+                <ScalarProperty Name="OrganizationName" ColumnName="OrganizationName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorksCommentsInfo">
+            <EntityTypeMapping TypeName="FuturaDentalModel.WorksCommentsInfo">
+              <MappingFragment StoreEntitySet="WorksCommentsInfo">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="WorkID" ColumnName="WorkID" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="InsertTime" ColumnName="InsertTime" />
+                <ScalarProperty Name="UserFirstName" ColumnName="UserFirstName" />
+                <ScalarProperty Name="UserLastName" ColumnName="UserLastName" />
+                <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorksInfo">
+            <EntityTypeMapping TypeName="FuturaDentalModel.WorksInfo">
+              <MappingFragment StoreEntitySet="WorksInfo">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="LaboratoryID" ColumnName="LaboratoryID" />
+                <ScalarProperty Name="OrdinationID" ColumnName="OrdinationID" />
+                <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+                <ScalarProperty Name="PatientName" ColumnName="PatientName" />
+                <ScalarProperty Name="PatientAddress" ColumnName="PatientAddress" />
+                <ScalarProperty Name="PatientPhone" ColumnName="PatientPhone" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="InsertTime" ColumnName="InsertTime" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="RequestedTestTime" ColumnName="RequestedTestTime" />
+                <ScalarProperty Name="RequestedFinishTime" ColumnName="RequestedFinishTime" />
+                <ScalarProperty Name="LaboratoryName" ColumnName="LaboratoryName" />
+                <ScalarProperty Name="OrdinationName" ColumnName="OrdinationName" />
+                <ScalarProperty Name="DoctorFirstName" ColumnName="DoctorFirstName" />
+                <ScalarProperty Name="DoctorLastName" ColumnName="DoctorLastName" />
+                <ScalarProperty Name="DoctorTitle" ColumnName="DoctorTitle" />
+                <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+                <ScalarProperty Name="UserFirstName" ColumnName="UserFirstName" />
+                <ScalarProperty Name="UserLastName" ColumnName="UserLastName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorksPositionsInfo">
+            <EntityTypeMapping TypeName="FuturaDentalModel.WorksPositionsInfo">
+              <MappingFragment StoreEntitySet="WorksPositionsInfo">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="WorkID" ColumnName="WorkID" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="WorkTypeID" ColumnName="WorkTypeID" />
+                <ScalarProperty Name="BridgeID" ColumnName="BridgeID" />
+                <ScalarProperty Name="BridgePosition" ColumnName="BridgePosition" />
+                <ScalarProperty Name="WorkTypeParentID" ColumnName="WorkTypeParentID" />
+                <ScalarProperty Name="WorkTypeName" ColumnName="WorkTypeName" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="WorkMarkID" ColumnName="WorkMarkID" />
+                <ScalarProperty Name="WorkMarkName" ColumnName="WorkMarkName" />
+                <ScalarProperty Name="StateName" ColumnName="StateName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkTypesInfo">
+            <EntityTypeMapping TypeName="FuturaDentalModel.WorkTypesInfo">
+              <MappingFragment StoreEntitySet="WorkTypesInfo">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Archived" ColumnName="Archived" />
+                <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+                <ScalarProperty Name="OrganizationName" ColumnName="OrganizationName" />
+                <ScalarProperty Name="ParentName" ColumnName="ParentName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="Locations_Laboratories" TypeName="FuturaDentalModel.Locations_Laboratories" StoreEntitySet="Locations_Laboratories">
+            <EndProperty Name="Laboratories">
+              <ScalarProperty Name="ID" ColumnName="LaboratoryID" />
+            </EndProperty>
+            <EndProperty Name="Locations">
+              <ScalarProperty Name="ID" ColumnName="LocationID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Locations_Ordinations" TypeName="FuturaDentalModel.Locations_Ordinations" StoreEntitySet="Locations_Ordinations">
+            <EndProperty Name="Locations">
+              <ScalarProperty Name="ID" ColumnName="LocationID" />
+            </EndProperty>
+            <EndProperty Name="Ordinations">
+              <ScalarProperty Name="ID" ColumnName="OrdinationID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Roles_Actions" TypeName="FuturaDentalModel.Roles_Actions" StoreEntitySet="Roles_Actions">
+            <EndProperty Name="Actions">
+              <ScalarProperty Name="ID" ColumnName="ActionID" />
+            </EndProperty>
+            <EndProperty Name="Roles">
+              <ScalarProperty Name="ID" ColumnName="RoleID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Users_Locations" TypeName="FuturaDentalModel.Users_Locations" StoreEntitySet="Users_Locations">
+            <EndProperty Name="Locations">
+              <ScalarProperty Name="ID" ColumnName="LocationID" />
+            </EndProperty>
+            <EndProperty Name="Users">
+              <ScalarProperty Name="ID" ColumnName="UserID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Users_Roles" TypeName="FuturaDentalModel.Users_Roles" StoreEntitySet="Users_Roles">
+            <EndProperty Name="Roles">
+              <ScalarProperty Name="ID" ColumnName="RoleID" />
+            </EndProperty>
+            <EndProperty Name="Users">
+              <ScalarProperty Name="ID" ColumnName="UserID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

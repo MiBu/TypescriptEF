@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b03753e75ae84078abe365effd14e1ea" Name="Diagram1">
+        <EntityTypeShape EntityType="FuturaDentalModel.Actions" Width="1.5" PointX="4" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.Countries" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.Currencies" Width="1.5" PointX="3.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.Doctors" Width="1.5" PointX="12.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.Laboratories" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.Languages" Width="1.5" PointX="3.75" PointY="30.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.Locations" Width="1.5" PointX="5.25" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.LocationTypes" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.Ordinations" Width="1.5" PointX="10.5" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.Organizations" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.PositionStates" Width="1.5" PointX="3" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.Resources" Width="1.5" PointX="6" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.Roles" Width="1.5" PointX="6.25" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.Settings" Width="1.5" PointX="6" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.Statuses" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.Users" Width="1.5" PointX="8.5" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.Workers" Width="1.5" PointX="5.25" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.WorkGroups" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.WorkMarks" Width="1.5" PointX="11.5" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.Works" Width="1.5" PointX="7.5" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.WorksComments" Width="1.5" PointX="12.75" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.WorksDetails" Width="1.5" PointX="10.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.WorksPositions" Width="1.5" PointX="13.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.WorkTypes" Width="1.5" PointX="3" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.DoctorsInfo" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.LaboratoriesInfo" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.OrdinationsInfo" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.UsersInfo" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.WorksCommentsInfo" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.WorksInfo" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.WorksPositionsInfo" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FuturaDentalModel.WorkTypesInfo" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <AssociationConnector Association="FuturaDentalModel.FK_Actions_Actions" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_Settings_Currencies" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_Doctors_Ordinations" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_Works_Doctors" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_Laboratories_Organizations" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_Workers_Laboratories" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_Works_Laboratories" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_Resources_Languages" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_Settings_Languages" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_Locations_Organizations" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_Works_Locations" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_Ordinations_Organizations" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_Works_Ordinations" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_PositionStates_Organizations" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_Settings_Organizations" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_Users_Organizations" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_WorkTypes_Organizations" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_WorksPositions_PositionStates" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_Works_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_WorksComments_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_WorksPositions_WorkMarks" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_WorksComments_Works" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_WorksDetails_Works" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_WorksPositions_Works" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_WorksDetails_WorkTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_WorksPositions_WorkTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.FK_WorkTypes_WorkTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.Locations_Laboratories" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.Locations_Ordinations" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.Roles_Actions" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.Users_Locations" ManuallyRouted="false" />
+        <AssociationConnector Association="FuturaDentalModel.Users_Roles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
