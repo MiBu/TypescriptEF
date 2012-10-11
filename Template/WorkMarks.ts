@@ -15,9 +15,9 @@ module Template
         }
     
     	id : int;
-    	name : string;
-    	archived : bool;
-    
+       	name : string;
+       	archived : var;
+       
     	workspositions : WorksPositions[];
     }
 }

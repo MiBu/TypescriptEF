@@ -19,13 +19,13 @@ module Template
         }
     
     	id : int;
-    	organizationid : int;
-    	name : string;
-    	address : string;
-    	telephone : string;
-    	email : string;
-    	archived : bool;
-    
+       	organizationid : int;
+       	name : string;
+       	address : string;
+       	telephone : string;
+       	email : string;
+       	archived : var;
+       
     	doctors : Doctors[];
     	organizations : Organizations[];
     	works : Works[];

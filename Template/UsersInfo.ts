@@ -21,13 +21,13 @@ module Template
         }
     
     	id : int;
-    	username : string;
-    	password : string;
-    	email : string;
-    	firstname : string;
-    	lastname : string;
-    	archived : bool;
-    	organizationid : int;
-    	organizationname : string;
-    }
+       	username : string;
+       	password : string;
+       	email : string;
+       	firstname : string;
+       	lastname : string;
+       	archived : var;
+       	organizationid : int;
+       	organizationname : string;
+       }
 }

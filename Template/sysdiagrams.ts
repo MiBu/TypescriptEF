@@ -17,9 +17,9 @@ module Template
         }
     
     	name : string;
-    	principal_id : int;
-    	diagram_id : int;
-    	version : Nullable<int>;
-    	definition : byte[];
-    }
+       	principal_id : int;
+       	diagram_id : int;
+       	version : int?;
+       	definition : var?;
+       }
 }

@@ -15,9 +15,9 @@ module Template
         }
     
     	id : int;
-    	name : string;
-    	code : string;
-    
+       	name : string;
+       	code : string;
+       
     	resources : Resources[];
     	settings : Settings[];
     }

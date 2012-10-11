@@ -19,11 +19,11 @@ module Template
         }
     
     	id : int;
-    	parentid : Nullable<int>;
-    	name : string;
-    	archived : bool;
-    	organizationid : int;
-    	organizationname : string;
-    	parentname : string;
-    }
+       	parentid : int?;
+       	name : string;
+       	archived : var;
+       	organizationid : int;
+       	organizationname : string;
+       	parentname : string;
+       }
 }

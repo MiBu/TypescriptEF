@@ -20,12 +20,12 @@ module Template
         }
     
     	id : int;
-    	workid : int;
-    	comment : string;
-    	userid : int;
-    	inserttime : System.DateTime;
-    	userfirstname : string;
-    	userlastname : string;
-    	useremail : string;
-    }
+       	workid : int;
+       	comment : string;
+       	userid : int;
+       	inserttime : var;
+       	userfirstname : string;
+       	userlastname : string;
+       	useremail : string;
+       }
 }

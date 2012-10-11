@@ -15,7 +15,7 @@ module Template
         }
     
     	id : int;
-    	name : string;
-    	nationality : string;
-    }
+       	name : string;
+       	nationality : string;
+       }
 }

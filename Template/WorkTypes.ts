@@ -17,11 +17,11 @@ module Template
         }
     
     	id : int;
-    	parentid : Nullable<int>;
-    	name : string;
-    	organizationid : int;
-    	archived : bool;
-    
+       	parentid : int?;
+       	name : string;
+       	organizationid : int;
+       	archived : var;
+       
     	organizations : Organizations[];
     	worksdetails : WorksDetails[];
     	workspositions : WorksPositions[];

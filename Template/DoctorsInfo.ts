@@ -19,11 +19,11 @@ module Template
         }
     
     	id : int;
-    	ordinationid : int;
-    	firstname : string;
-    	lastname : string;
-    	title : string;
-    	archived : bool;
-    	ordinationname : string;
-    }
+       	ordinationid : int;
+       	firstname : string;
+       	lastname : string;
+       	title : string;
+       	archived : var;
+       	ordinationname : string;
+       }
 }

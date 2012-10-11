@@ -21,15 +21,15 @@ module Template
         }
     
     	id : int;
-    	workid : int;
-    	position : int;
-    	stateid : int;
-    	worktypeid : Nullable<int>;
-    	bridgeid : Nullable<int>;
-    	bridgeposition : Nullable<int>;
-    	comment : string;
-    	workmarkid : Nullable<int>;
-    
+       	workid : int;
+       	position : int;
+       	stateid : int;
+       	worktypeid : int?;
+       	bridgeid : int?;
+       	bridgeposition : int?;
+       	comment : string;
+       	workmarkid : int?;
+       
     	positionstates : PositionStates[];
     	workmarks : WorkMarks[];
     	works : Works[];

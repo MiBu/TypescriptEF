@@ -15,9 +15,9 @@ module Template
         }
     
     	id : int;
-    	name : string;
-    	isocode : string;
-    
+       	name : string;
+       	isocode : string;
+       
     	settings : Settings[];
     }
 }

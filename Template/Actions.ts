@@ -16,10 +16,10 @@ module Template
         }
     
     	id : int;
-    	parentid : Nullable<int>;
-    	name : string;
-    	description : string;
-    
+       	parentid : int?;
+       	name : string;
+       	description : string;
+       
     	actions1 : Actions1[];
     	actions2 : Actions2[];
     	roles : Roles[];

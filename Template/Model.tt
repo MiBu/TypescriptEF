@@ -152,11 +152,13 @@ void EndNamespace(string namespaceName)
 void WriteProperty(CodeGenerationTools code, EdmProperty edmProperty)
 {
 	#>
-	<#= code.Escape(edmProperty).ToLower() #> : <#+if(edmProperty.DefaultValue != null){#>
-<#= code.GetTypeName(edmProperty.TypeUsage) #>
-<#+} else {#>
-<#=  code.GetTypeName(edmProperty.TypeUsage) #>;
-<#+}
+	<#= code.Escape(edmProperty).ToLower() #> : <#+if(((PrimitiveType)edmProperty.TypeUsage.EdmType).PrimitiveTypeKind == PrimitiveTypeKind.Int32){#>
+<#= "int"#><#+} else if(((PrimitiveType)edmProperty.TypeUsage.EdmType).PrimitiveTypeKind != PrimitiveTypeKind.Int32 &&((PrimitiveType)edmProperty.TypeUsage.EdmType).PrimitiveTypeKind != PrimitiveTypeKind.String){#>
+<#= "var"#><#+} else {#><#=  code.GetTypeName(edmProperty.TypeUsage) #><#+}
+if(edmProperty.Nullable &&((PrimitiveType)edmProperty.TypeUsage.EdmType).PrimitiveTypeKind != PrimitiveTypeKind.String)
+{#><#="?"  #><#+ 
+   }#>;
+   <#+
 }
 
 void WriteNavigationProperty(CodeGenerationTools code, NavigationProperty navigationProperty)

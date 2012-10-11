@@ -14,6 +14,6 @@ module Template
         }
     
     	id : int;
-    	name : string;
-    }
+       	name : string;
+       }
 }

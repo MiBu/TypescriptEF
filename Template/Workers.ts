@@ -17,11 +17,11 @@ module Template
         }
     
     	id : int;
-    	firstname : string;
-    	lastname : string;
-    	laboratoryid : Nullable<int>;
-    	archived : bool;
-    
+       	firstname : string;
+       	lastname : string;
+       	laboratoryid : int?;
+       	archived : var;
+       
     	laboratories : Laboratories[];
     }
 }

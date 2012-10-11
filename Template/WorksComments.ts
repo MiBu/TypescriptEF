@@ -17,11 +17,11 @@ module Template
         }
     
     	id : int;
-    	workid : int;
-    	comment : string;
-    	userid : int;
-    	inserttime : System.DateTime;
-    
+       	workid : int;
+       	comment : string;
+       	userid : int;
+       	inserttime : var;
+       
     	users : Users[];
     	works : Works[];
     }

@@ -20,14 +20,14 @@ module Template
         }
     
     	id : int;
-    	username : string;
-    	password : string;
-    	email : string;
-    	firstname : string;
-    	lastname : string;
-    	archived : bool;
-    	organizationid : int;
-    
+       	username : string;
+       	password : string;
+       	email : string;
+       	firstname : string;
+       	lastname : string;
+       	archived : var;
+       	organizationid : int;
+       
     	organizations : Organizations[];
     	works : Works[];
     	workscomments : WorksComments[];

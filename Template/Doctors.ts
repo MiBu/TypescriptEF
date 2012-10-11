@@ -19,13 +19,13 @@ module Template
         }
     
     	id : int;
-    	ordinationid : int;
-    	firstname : string;
-    	lastname : string;
-    	title : string;
-    	email : string;
-    	archived : bool;
-    
+       	ordinationid : int;
+       	firstname : string;
+       	lastname : string;
+       	title : string;
+       	email : string;
+       	archived : var;
+       
     	ordinations : Ordinations[];
     	works : Works[];
     }

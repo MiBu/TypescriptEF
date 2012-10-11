@@ -25,17 +25,17 @@ module Template
         }
     
     	id : int;
-    	workid : int;
-    	position : int;
-    	worktypeid : Nullable<int>;
-    	bridgeid : Nullable<int>;
-    	bridgeposition : Nullable<int>;
-    	worktypeparentid : Nullable<int>;
-    	worktypename : string;
-    	comment : string;
-    	stateid : int;
-    	workmarkid : Nullable<int>;
-    	workmarkname : string;
-    	statename : string;
-    }
+       	workid : int;
+       	position : int;
+       	worktypeid : int?;
+       	bridgeid : int?;
+       	bridgeposition : int?;
+       	worktypeparentid : int?;
+       	worktypename : string;
+       	comment : string;
+       	stateid : int;
+       	workmarkid : int?;
+       	workmarkname : string;
+       	statename : string;
+       }
 }

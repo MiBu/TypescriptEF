@@ -15,9 +15,9 @@ module Template
         }
     
     	id : int;
-    	organizationid : int;
-    	name : string;
-    
+       	organizationid : int;
+       	name : string;
+       
     	organizations : Organizations[];
     	works : Works[];
     	laboratories : Laboratories[];

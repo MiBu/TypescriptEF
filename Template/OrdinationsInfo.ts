@@ -17,9 +17,9 @@ module Template
         }
     
     	id : int;
-    	name : string;
-    	archived : bool;
-    	organizationid : int;
-    	organizationname : string;
-    }
+       	name : string;
+       	archived : var;
+       	organizationid : int;
+       	organizationname : string;
+       }
 }

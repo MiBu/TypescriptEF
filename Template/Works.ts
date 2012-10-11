@@ -27,21 +27,21 @@ module Template
         }
     
     	id : int;
-    	laboratoryid : Nullable<int>;
-    	ordinationid : int;
-    	doctorid : Nullable<int>;
-    	patientname : string;
-    	patientaddress : string;
-    	patientphone : string;
-    	notes : string;
-    	status : int;
-    	locationid : int;
-    	userid : int;
-    	inserttime : System.DateTime;
-    	priority : int;
-    	requestedtesttime : Nullable<System.DateTime>;
-    	requestedfinishtime : Nullable<System.DateTime>;
-    
+       	laboratoryid : int?;
+       	ordinationid : int;
+       	doctorid : int?;
+       	patientname : string;
+       	patientaddress : string;
+       	patientphone : string;
+       	notes : string;
+       	status : int;
+       	locationid : int;
+       	userid : int;
+       	inserttime : var;
+       	priority : int;
+       	requestedtesttime : var?;
+       	requestedfinishtime : var?;
+       
     	doctors : Doctors[];
     	laboratories : Laboratories[];
     	locations : Locations[];

@@ -16,10 +16,10 @@ module Template
         }
     
     	id : int;
-    	organizationid : Nullable<int>;
-    	currencyid : int;
-    	languageid : int;
-    
+       	organizationid : int?;
+       	currencyid : int;
+       	languageid : int;
+       
     	currencies : Currencies[];
     	languages : Languages[];
     	organizations : Organizations[];

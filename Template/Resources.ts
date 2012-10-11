@@ -17,11 +17,11 @@ module Template
         }
     
     	id : int;
-    	tablename : string;
-    	fieldname : string;
-    	languageid : int;
-    	resourcevalue : string;
-    
+       	tablename : string;
+       	fieldname : string;
+       	languageid : int;
+       	resourcevalue : string;
+       
     	languages : Languages[];
     }
 }

@@ -14,8 +14,8 @@ module Template
         }
     
     	id : int;
-    	name : string;
-    
+       	name : string;
+       
     	laboratories : Laboratories[];
     	locations : Locations[];
     	ordinations : Ordinations[];

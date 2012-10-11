@@ -16,10 +16,10 @@ module Template
         }
     
     	id : int;
-    	organizationid : int;
-    	name : string;
-    	archived : bool;
-    
+       	organizationid : int;
+       	name : string;
+       	archived : var;
+       
     	organizations : Organizations[];
     	workers : Workers[];
     	works : Works[];
